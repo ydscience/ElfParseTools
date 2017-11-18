@@ -1,0 +1,13 @@
+ __asm__ __volatile__ (
+    "STMFD SP!, {R0 - R12, LR} \n");
+
+myEntry();
+
+ __asm__ __volatile__(
+    "STMFD SP!, {R0 - R12, LR} \n"
+    "LDMFD SP!, {R0 - R12} \n"
+            "LDR LR, = 0x814F0000 \n"
+            "LDR LR, [LR] \n"
+            "BLX LR \n"
+            "LDMFD SP!, {PC} \n"
+    );
