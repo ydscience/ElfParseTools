@@ -1,4 +1,4 @@
-# ElfParseTools
+ ElfParseTools
 模仿readellf 解析软件对so文件进行解析
 1.查看Elf文件头信息
   ElfParseTools -h  filePath;
